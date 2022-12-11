@@ -15,9 +15,11 @@ button:hover {
   cursor: pointer;
 }
 .display {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   font-size: 40px;
   display: flex;
-  width: 9.5cm;
+  width: 9cm;
   height: 2cm;
   justify-content: center;
   background-color: rgba(113, 117, 120, 0.4);
@@ -25,8 +27,9 @@ button:hover {
   align-items: center;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
-  border-top: 0.6cm solid blue;
   overflow: hidden;
+  /* overflow: scroll;
+  overflow-y: hidden; */
   text-align: center;
 }
 .row {
@@ -57,4 +60,8 @@ html {
 }
 .row:last-child button:last-child {
   border-bottom-right-radius: 20px;
+}
+h1 {
+  color: white;
+  margin-left: 25%;
 }
