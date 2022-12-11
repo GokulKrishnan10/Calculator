@@ -44,6 +44,7 @@ button:last-child {
 }
 html {
   user-select: none;
+  font-family: "Nunito";
 }
 #last1 {
   width: 3.8cm;
