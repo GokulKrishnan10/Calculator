@@ -7,6 +7,9 @@ function Click(event) {
   //   operator = event.target.value;
   // }
   const target = event.target.value;
+  if (display.innerText === "SYNTAX ERROR") {
+    display.innerText = target;
+  }
   if (!target) {
     console.log("Clicked Clear");
     display.innerText = "";
@@ -32,6 +35,7 @@ function validParanthesis(string) {
     const char = string.charAt(i);
     if (char == "(" || char == ")") arr.push(char);
   }
+  if (!arr) return true;
   for (let c in arr) {
     if (!stack || c == "(" || c == "{" || c == "[") {
       stack.push(c);
@@ -45,4 +49,5 @@ function validParanthesis(string) {
       return false;
     }
   }
+  return true;
 }
