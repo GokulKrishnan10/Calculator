@@ -17,6 +17,7 @@ button:hover {
 .display {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
+  border-top: 5px solid transparent;
   font-size: 40px;
   display: flex;
   width: 9cm;
@@ -66,5 +67,5 @@ h1 {
   margin-left: 25%;
 }
 #backspace {
-  width: 9.7cm;
+  width: 9.6cm;
 }
