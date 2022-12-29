@@ -5,6 +5,7 @@ class Calculator {
   }
   delete() {}
   calculate() {}
+  validParanthesis() {}
 }
 function Click(event) {
   console.log("BUtton clicked");
