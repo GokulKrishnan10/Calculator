@@ -1,4 +1,11 @@
 let operator = "";
+class Calculator {
+  constructor(operator) {
+    this.operator = operator;
+  }
+  delete() {}
+  calculate() {}
+}
 function Click(event) {
   console.log("BUtton clicked");
   const display = document.querySelector(".display");
@@ -46,19 +53,21 @@ function Click(event) {
 
 function validParanthesis(string) {
   if (!string) return true;
+  let arr = Array.from(string);
+  if (!arr.some((c) => c === "(" || c === ")")) {
+    return true;
+  }
+  console.log("HERE", arr);
   let stack = [];
-  for (let c of string) {
-    if (!stack || c == "(" || c == "{" || c == "[") {
+  for (let c of arr) {
+    if (!stack || c == "(") {
       stack.push(c);
-    } else if (c == ")" && stack[stack.length - 1] == "(") {
-      stack.pop();
-    } else if (c == "}" && stack[stack.length - 1] == "{") {
-      stack.pop();
-    } else if (c == "]" && stack[stack.length - 1] == "[") {
+    } else if (c == ")" && stack.at(-1) == "(") {
       stack.pop();
     } else {
       return false;
     }
   }
+  console.log("GOT IT HERE............");
   return true;
 }
